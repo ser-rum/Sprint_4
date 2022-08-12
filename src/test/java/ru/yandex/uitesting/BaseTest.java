@@ -3,6 +3,7 @@ package ru.yandex.uitesting;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.After;
 import org.junit.Before;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;         //Закомментировать для проверки на Firefox
 //import org.openqa.selenium.firefox.FirefoxDriver;     //Раскомментировать для проверки на Firefox
@@ -21,6 +22,8 @@ public class BaseTest {
         WebDriverManager.chromedriver().setup();        //Закомментировать для проверки на Firefox
         driver = new ChromeDriver();                    //Закомментировать для проверки на Firefox
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        driver.get("https://qa-scooter.praktikum-services.ru/");
+        driver.findElement(By.id("rcc-confirm-button")).click();
 
     }
 

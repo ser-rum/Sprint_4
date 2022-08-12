@@ -7,10 +7,8 @@ import org.openqa.selenium.WebElement;
 
 public class MainPage {
 
-    private final WebDriver driver;
+    WebDriver driver;
 
-    //Кнопка "Да все привыкли" для закрытия окна с сообщением о использовании куки
-    private final By cookieAcceptButton = By.id("rcc-confirm-button");
     //Верхняя кнопка "Заказать"
     private final By topOrderButton = By.xpath("/html/body/div/div/div/div[1]/div[2]/button[1]");
     //Нижняя кнопка "Заказать"
@@ -22,12 +20,6 @@ public class MainPage {
         this.driver = driver;
     }
 
-
-    public void clickCookieButton(){
-
-        driver.findElement(cookieAcceptButton).click();
-
-    }
 
     public String shouldBeExactText(By importantQuestionSelector,
                                     By importantAnswerSelector){

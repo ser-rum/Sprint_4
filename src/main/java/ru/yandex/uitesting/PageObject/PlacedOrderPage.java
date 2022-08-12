@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 
 public class PlacedOrderPage {
 
-    private final WebDriver driver;
+    WebDriver driver;
     //Текст сообщения об успешном оформлении заказа
     private final By placedOrderText = By.cssSelector(".Order_ModalHeader__3FDaJ");
 
